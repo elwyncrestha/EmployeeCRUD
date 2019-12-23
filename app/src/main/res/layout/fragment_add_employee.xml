@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_employee_details"
+        android:textSize="40sp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_full_name"
+        android:inputType="text"
+        style="@style/StyleAddEmployeeForm"/>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_age"
+        android:inputType="number"
+        style="@style/StyleAddEmployeeForm"/>
+
+    <EditText
+        android:id="@+id/etSalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_salary"
+        android:inputType="numberDecimal"
+        style="@style/StyleAddEmployeeForm"/>
+
+    <Button
+        android:id="@+id/btnSaveEmployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        style="@style/StyleLoginFormInput"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"/>
+
+</LinearLayout>

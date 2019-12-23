@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        RecyclerView rvStudents = root.findViewById(R.id.rvStudents);
+        RecyclerView rvEmployees = root.findViewById(R.id.rvEmployees);
 
         final List<Employee> employeeList = new ArrayList<>();
         Call<List<Employee>> listCall = AppRequestBuilder.retrofit.create(EmployeeService.class).findAll();
@@ -53,8 +53,8 @@ public class HomeFragment extends Fragment {
             }
         });
         EmployeeAdapter employeeAdapter = new EmployeeAdapter(getContext(), employeeList);
-        rvStudents.setAdapter(employeeAdapter);
-        rvStudents.setLayoutManager(new LinearLayoutManager(getContext()));
+        rvEmployees.setAdapter(employeeAdapter);
+        rvEmployees.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return root;
     }
