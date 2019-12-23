@@ -1,3 +1,3 @@
 # EmployeeCRUD
 * Cloned repo of [ESoftwaricaAlias](https://github.com/elwyncrestha/ESoftwaricaAlias)
-* Tweaked to changed into EmployeeCRUD
+* Tweaked to change into EmployeeCRUD
