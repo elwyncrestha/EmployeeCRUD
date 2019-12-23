@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ESoftwaricaAlias</string>
+    <string name="app_logo">App Logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="save">Save</string>
+    <string name="title_home">Home</string>
+    <string name="title_add_student">Add Student</string>
+    <string name="title_about_us">About Us</string>
+    <string name="title_student_details">Student Details</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="label_address">Address</string>
+    <string name="label_age">Age</string>
+    <string name="label_select_gender">Select Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_others">Others</string>
+</resources>
