@@ -15,9 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.elvin.employeecrud.R;
-import com.elvin.employeecrud.core.InAppDataHolder;
-import com.elvin.employeecrud.model.entity.Student;
-import com.elvin.employeecrud.model.enums.Gender;
 
 public class AddStudentFragment extends Fragment implements View.OnClickListener {
 
@@ -61,11 +58,11 @@ public class AddStudentFragment extends Fragment implements View.OnClickListener
             return;
         }
 
-        InAppDataHolder.students.add(new Student(fullName, Integer.parseInt(age), address, Gender.getEnum(String.valueOf(genderRadio.getText()))));
-        Toast.makeText(getContext(), "Student added!!!", Toast.LENGTH_SHORT).show();
-        this.etFullName.setText("");
-        this.etAge.setText("");
-        this.etAddress.setText("");
-        this.rgGender.clearCheck();
+//        InAppDataHolder.students.add(new Student(fullName, Integer.parseInt(age), address, Gender.getEnum(String.valueOf(genderRadio.getText()))));
+//        Toast.makeText(getContext(), "Student added!!!", Toast.LENGTH_SHORT).show();
+//        this.etFullName.setText("");
+//        this.etAge.setText("");
+//        this.etAddress.setText("");
+//        this.rgGender.clearCheck();
     }
 }
