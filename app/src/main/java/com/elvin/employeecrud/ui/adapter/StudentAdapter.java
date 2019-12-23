@@ -1,4 +1,4 @@
-package com.elvin.esoftwaricaalias.ui.adapter;
+package com.elvin.employeecrud.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.elvin.esoftwaricaalias.R;
-import com.elvin.esoftwaricaalias.core.InAppDataHolder;
-import com.elvin.esoftwaricaalias.model.entity.Student;
+import com.elvin.employeecrud.R;
+import com.elvin.employeecrud.core.InAppDataHolder;
+import com.elvin.employeecrud.model.entity.Student;
 
 import java.util.List;
 

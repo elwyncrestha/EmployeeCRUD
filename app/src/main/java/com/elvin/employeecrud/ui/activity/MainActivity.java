@@ -1,4 +1,4 @@
-package com.elvin.esoftwaricaalias.ui.activity;
+package com.elvin.employeecrud.ui.activity;
 
 import android.os.Bundle;
 
@@ -7,7 +7,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
-import com.elvin.esoftwaricaalias.R;
+import com.elvin.employeecrud.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

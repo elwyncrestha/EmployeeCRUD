@@ -1,6 +1,6 @@
-package com.elvin.esoftwaricaalias.model.entity;
+package com.elvin.employeecrud.model.entity;
 
-import com.elvin.esoftwaricaalias.model.enums.Gender;
+import com.elvin.employeecrud.model.enums.Gender;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

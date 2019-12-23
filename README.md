@@ -1,2 +1,3 @@
-# ESoftwaricaAlias
-Copy of ESoftwarica (Google Play Store)
+# EmployeeCRUD
+* Cloned repo of ESoftwarica
+* Tweaked to changed into EmployeeCRUD

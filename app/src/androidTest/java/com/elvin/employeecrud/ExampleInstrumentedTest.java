@@ -1,4 +1,4 @@
-package com.elvin.esoftwaricaalias;
+package com.elvin.employeecrud;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.elvin.esoftwaricaalias", appContext.getPackageName());
+        assertEquals("com.elvin.employeecrud", appContext.getPackageName());
     }
 }

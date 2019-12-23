@@ -1,7 +1,7 @@
-package com.elvin.esoftwaricaalias.core;
+package com.elvin.employeecrud.core;
 
-import com.elvin.esoftwaricaalias.model.entity.Student;
-import com.elvin.esoftwaricaalias.model.enums.Gender;
+import com.elvin.employeecrud.model.entity.Student;
+import com.elvin.employeecrud.model.enums.Gender;
 
 import java.util.LinkedList;
 import java.util.List;

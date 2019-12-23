@@ -1,4 +1,4 @@
-package com.elvin.esoftwaricaalias.ui.fragment.about;
+package com.elvin.employeecrud.ui.fragment.about;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,8 +9,8 @@ import android.webkit.WebView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.elvin.esoftwaricaalias.R;
-import com.elvin.esoftwaricaalias.core.AppConstant;
+import com.elvin.employeecrud.R;
+import com.elvin.employeecrud.core.AppConstant;
 
 public class AboutUsFragment extends Fragment {
 

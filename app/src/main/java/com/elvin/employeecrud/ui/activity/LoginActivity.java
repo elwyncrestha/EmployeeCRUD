@@ -1,4 +1,4 @@
-package com.elvin.esoftwaricaalias.ui.activity;
+package com.elvin.employeecrud.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.elvin.esoftwaricaalias.R;
-import com.elvin.esoftwaricaalias.core.AppConstant;
+import com.elvin.employeecrud.R;
+import com.elvin.employeecrud.core.AppConstant;
 
 public class LoginActivity extends AppCompatActivity {
 

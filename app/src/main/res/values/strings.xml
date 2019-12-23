@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ESoftwaricaAlias</string>
+    <string name="app_name">EmployeeCRUD</string>
     <string name="app_logo">App Logo</string>
     <string name="username">Username</string>
     <string name="password">Password</string>

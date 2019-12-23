@@ -1,4 +1,4 @@
-package com.elvin.esoftwaricaalias.ui.fragment.student;
+package com.elvin.employeecrud.ui.fragment.student;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,10 +14,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.elvin.esoftwaricaalias.R;
-import com.elvin.esoftwaricaalias.core.InAppDataHolder;
-import com.elvin.esoftwaricaalias.model.entity.Student;
-import com.elvin.esoftwaricaalias.model.enums.Gender;
+import com.elvin.employeecrud.R;
+import com.elvin.employeecrud.core.InAppDataHolder;
+import com.elvin.employeecrud.model.entity.Student;
+import com.elvin.employeecrud.model.enums.Gender;
 
 public class AddStudentFragment extends Fragment implements View.OnClickListener {
 

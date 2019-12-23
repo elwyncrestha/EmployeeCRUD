@@ -1,11 +1,9 @@
-package com.elvin.esoftwaricaalias.ui.fragment.home;
+package com.elvin.employeecrud.ui.fragment.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -13,9 +11,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.elvin.esoftwaricaalias.R;
-import com.elvin.esoftwaricaalias.core.InAppDataHolder;
-import com.elvin.esoftwaricaalias.ui.adapter.StudentAdapter;
+import com.elvin.employeecrud.R;
+import com.elvin.employeecrud.core.InAppDataHolder;
+import com.elvin.employeecrud.ui.adapter.StudentAdapter;
 
 public class HomeFragment extends Fragment {
 

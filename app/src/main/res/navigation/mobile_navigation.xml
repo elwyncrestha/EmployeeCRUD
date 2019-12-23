@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.elvin.esoftwaricaalias.ui.fragment.home.HomeFragment"
+        android:name="com.elvin.employeecrud.ui.fragment.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_add_student"
-        android:name="com.elvin.esoftwaricaalias.ui.fragment.student.AddStudentFragment"
+        android:name="com.elvin.employeecrud.ui.fragment.student.AddStudentFragment"
         android:label="@string/title_add_student"
         tools:layout="@layout/fragment_add_student" />
 
     <fragment
         android:id="@+id/navigation_about_us"
-        android:name="com.elvin.esoftwaricaalias.ui.fragment.about.AboutUsFragment"
+        android:name="com.elvin.employeecrud.ui.fragment.about.AboutUsFragment"
         android:label="@string/title_about_us"
         tools:layout="@layout/fragment_about_us" />
 </navigation>
