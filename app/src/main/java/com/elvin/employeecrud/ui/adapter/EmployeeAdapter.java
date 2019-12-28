@@ -19,6 +19,9 @@ import com.elvin.employeecrud.model.service.EmployeeService;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * @author Elvin Shrestha on 23/12/19
@@ -27,10 +30,16 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
 
     private Context context;
     private List<Employee> employees;
+    private EmployeeListener employeeListener;
 
-    public EmployeeAdapter(Context context, List<Employee> employees) {
+    public interface EmployeeListener {
+        void onDelete();
+    }
+
+    public EmployeeAdapter(Context context, List<Employee> employees, EmployeeListener employeeListener) {
         this.context = context;
         this.employees = employees;
+        this.employeeListener = employeeListener;
     }
 
     @NonNull
@@ -51,7 +60,18 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
 
         holder.civEmployeeImage.setOnClickListener(v -> Toast.makeText(context, String.format("Hello this is: %s", holder.tvName.getText().toString()), Toast.LENGTH_SHORT).show());
         holder.ibtnRemove.setOnClickListener(v -> {
-            RetrofitUtils.getInstance().create(EmployeeService.class).delete(Long.valueOf(holder.tvId.getText().toString()));
+            RetrofitUtils.getInstance().create(EmployeeService.class).delete(Long.valueOf(holder.tvId.getText().toString())).enqueue(new Callback<Void>() {
+                @Override
+                public void onResponse(Call<Void> call, Response<Void> response) {
+                    employeeListener.onDelete();
+                    Toast.makeText(context, "Deleted Successfully!!!", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onFailure(Call<Void> call, Throwable t) {
+                    Toast.makeText(context, "Failed to deleted!!!", Toast.LENGTH_SHORT).show();
+                }
+            });
             notifyItemChanged(position);
         });
     }

@@ -27,11 +27,18 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
+    private RecyclerView rvEmployees;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        RecyclerView rvEmployees = root.findViewById(R.id.rvEmployees);
+        rvEmployees = root.findViewById(R.id.rvEmployees);
+        fillData();
 
+        return root;
+    }
+
+    private void fillData() {
         List<Employee> employeeList = new ArrayList<>();
         RetrofitUtils.getInstance().create(EmployeeService.class).findAll().enqueue(new Callback<List<Employee>>() {
             @Override
@@ -42,7 +49,7 @@ public class HomeFragment extends Fragment {
                 }
 
                 response.body().forEach(employeeList::add);
-                EmployeeAdapter employeeAdapter = new EmployeeAdapter(getContext(), employeeList);
+                EmployeeAdapter employeeAdapter = new EmployeeAdapter(getContext(), employeeList, () -> fillData());
                 rvEmployees.setAdapter(employeeAdapter);
                 rvEmployees.setLayoutManager(new LinearLayoutManager(getContext()));
             }
@@ -53,7 +60,5 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getActivity(), "Error " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
-        return root;
     }
 }
