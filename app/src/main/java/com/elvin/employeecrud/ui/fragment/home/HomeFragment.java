@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.elvin.employeecrud.R;
-import com.elvin.employeecrud.core.AppRequestBuilder;
+import com.elvin.employeecrud.core.RetrofitUtils;
 import com.elvin.employeecrud.model.entity.Employee;
 import com.elvin.employeecrud.model.service.EmployeeService;
 import com.elvin.employeecrud.ui.adapter.EmployeeAdapter;
@@ -33,8 +33,7 @@ public class HomeFragment extends Fragment {
         RecyclerView rvEmployees = root.findViewById(R.id.rvEmployees);
 
         final List<Employee> employeeList = new ArrayList<>();
-        Call<List<Employee>> listCall = AppRequestBuilder.retrofit.create(EmployeeService.class).findAll();
-        listCall.enqueue(new Callback<List<Employee>>() {
+        RetrofitUtils.getInstance().create(EmployeeService.class).findAll().enqueue(new Callback<List<Employee>>() {
             @Override
             public void onResponse(Call<List<Employee>> call, Response<List<Employee>> response) {
                 if (!response.isSuccessful()) {

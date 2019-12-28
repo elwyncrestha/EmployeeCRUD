@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.elvin.employeecrud.R;
-import com.elvin.employeecrud.core.AppRequestBuilder;
+import com.elvin.employeecrud.core.RetrofitUtils;
 import com.elvin.employeecrud.model.entity.Employee;
 import com.elvin.employeecrud.model.service.EmployeeService;
 
@@ -51,7 +51,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
 
         holder.civEmployeeImage.setOnClickListener(v -> Toast.makeText(context, String.format("Hello this is: %s", holder.tvName.getText().toString()), Toast.LENGTH_SHORT).show());
         holder.ibtnRemove.setOnClickListener(v -> {
-            AppRequestBuilder.retrofit.create(EmployeeService.class).delete(Long.valueOf(holder.tvId.getText().toString()));
+            RetrofitUtils.getInstance().create(EmployeeService.class).delete(Long.valueOf(holder.tvId.getText().toString()));
             notifyItemChanged(position);
         });
     }

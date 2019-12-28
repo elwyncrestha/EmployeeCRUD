@@ -8,15 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.elvin.employeecrud.R;
-import com.elvin.employeecrud.core.AppRequestBuilder;
+import com.elvin.employeecrud.core.RetrofitUtils;
 import com.elvin.employeecrud.model.entity.Employee;
 import com.elvin.employeecrud.model.service.EmployeeService;
 
@@ -60,7 +58,7 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
             return;
         }
 
-        AppRequestBuilder.retrofit.create(EmployeeService.class).save(new Employee(
+        RetrofitUtils.getInstance().create(EmployeeService.class).save(new Employee(
                 null, fullName, Float.parseFloat(salary), Integer.parseInt(age), null
         )).enqueue(new Callback<Void>() {
             @Override
